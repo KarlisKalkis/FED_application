@@ -1,5 +1,5 @@
 // link to open trivia database
-// https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple
+//https://opentdb.com/api.php?amount=10&category=18&type=multiple
 
 const _question = document.getElementById('question');
 const _options = document.querySelector('.quiz-options');
@@ -13,7 +13,7 @@ let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
 
 // load question from API
 async function loadQuestion(){
-    const APIUrl = 'https://opentdb.com/api.php?amount=1&category=18&difficulty=easy&type=multiple';
+    const APIUrl = 'https://opentdb.com/api.php?amount=1&category=18&type=multiple';
     const result = await fetch(`${APIUrl}`)
     const data = await result.json();
     _result.innerHTML = "";
